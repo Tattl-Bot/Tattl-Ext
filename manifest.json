@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Accountability Ext",
+  "version": "1.0",
+
+  "description": "Holds you accountable for visiting certain websites",
+
+  "permissions": [
+    "*://*.youtube.com/*",
+    "tabs",
+    "nativeMessaging",
+    "activeTab"
+  ],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "accountability@ext"
+    }
+  },
+
+  "background": {
+    "scripts": ["monitor.js"]
+  }
+}
