@@ -1,0 +1,5 @@
+This is the Mozilla WebExtension browser API Polyfill that I need to make my code work on Chrome
+
+Exact link to source: https://unpkg.com/webextension-polyfill@0.8.0/dist/browser-polyfill.js
+
+More info: https://github.com/mozilla/webextension-polyfill/
