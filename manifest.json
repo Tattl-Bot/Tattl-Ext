@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Accountability Ext",
-  "version": "1.0",
+  "name": "Tattl",
+  "version": "0.1.0",
 
-  "description": "Holds you accountable for visiting certain websites",
+  "description": "Eliminate online distractions by logging your visits to potentially distracting websites",
 
   "icons": {
     "48": "logo/tattl.svg",
@@ -19,7 +19,7 @@
 
   "browser_specific_settings": {
     "gecko": {
-      "id": "accountability@ext"
+      "id": "tattl@ext"
     }
   },
 
@@ -30,7 +30,7 @@
   },
 
   "browser_action": {
-    "default_title": "accountability-ext",
+    "default_title": "Tattl",
     "default_popup": "popup/index.html"
   }
 }
