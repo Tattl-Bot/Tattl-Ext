@@ -32,14 +32,8 @@ let prev = {
 let regexWatchList = null;
 const delay = 5;
 async function handleEvent(tabId, changeInfo, tabInfo) {
-  //const url = changeInfo.url;
   const url = tabInfo.url;
-  //console.log(regexWatchList);
-  //console.log(url);
-  //console.log(regexWatchList.some((regexUrl) => url.match(regexUrl)));
-  //console.log(url.match(regexWatchList[0]));
   if (url && regexWatchList.some((regexUrl) => url.match(regexUrl))) {
-    console.log(url);
     const timestamp = Date.now();
     const elapsed = timestamp - prev.timestamp;
     if (url !== prev.url || elapsed > delay * 1000) {
@@ -52,13 +46,14 @@ async function handleEvent(tabId, changeInfo, tabInfo) {
 
 function updateRegexWatchList(watchList) {
   regexWatchList = [];
-  watchList.forEach((url) => {
-    url = url.replaceAll(".", "\\.");
-    url = url.replaceAll("*", ".*");
-    let regexUrl = new RegExp(url);
-    regexWatchList.push(regexUrl);
-  });
-  console.log(regexWatchList);
+  if (watchList) {
+    watchList.forEach((url) => {
+      url = url.replaceAll(".", "\\.");
+      url = url.replaceAll("*", ".*");
+      let regexUrl = new RegExp(url);
+      regexWatchList.push(regexUrl);
+    });
+  }
 }
 
 async function updateWatchlist() {
