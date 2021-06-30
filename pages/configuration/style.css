@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: auto;
+}
+
+.wrap {
+  width: 40rem;
+  margin: 2rem auto;
+  border: solid #eee;
+  padding: 1rem 4rem;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+*:focus {
+  outline: none !important;
+}
+
+input,
+button {
+  width: 100%;
+  height: 3rem;
+  padding: 0.75rem;
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 0.5rem;
+  box-shadow: 0.4rem 0.4rem 0.1rem rgb(216, 216, 216);
+}
+
+input[type="text"] {
+  border: 0.1rem solid #eee;
+  color: rgb(58, 58, 58);
+}
+
+input[type="text"]:focus,
+input[type="text"]:hover,
+textarea:hover,
+textarea:focus {
+  background-color: #fdfdff;
+  border: 0.1rem solid rgb(131, 131, 131);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  transition: 0.3s box-shadow;
+}
+
+button {
+  border: none;
+  background-color: #3f51b5;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #001797;
+}
+
+label,
+p {
+  margin-right: 1rem;
+  font-size: large;
+  font-weight: 500;
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+  border: 0.1rem solid rgb(200, 200, 200);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+div.section {
+  margin: 4rem 0;
+}
+
+.section button {
+  width: 100%;
+}
+
+form > div,
+.section div {
+  margin: 1.5rem 0;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.info {
+  opacity: 0;
+}
+
+.seen {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.success {
+  font-weight: 800;
+  color: green;
+}
+
+.error {
+  font-weight: 800;
+  color: red;
+}
+
+label {
+  display: block;
+}
+
+.flex {
+  display: flex;
+  align-items: center !important;
+  justify-content: space-between;
+}
+
+#tokenBtn {
+  flex-basis: 15%;
+  box-shadow: none;
+}
+
+#token {
+  flex-basis: 65%;
+  box-shadow: none;
+}
+
+#copyTokenBtn {
+  flex-basis: 4%;
+  box-shadow: none;
+}
+
+#deleteBtn {
+  background-color: rgb(175, 0, 0);
+  width: 40%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#deleteBtn:hover {
+  background-color: rgb(150, 0, 0);
+}
+
+.center {
+  text-align: center;
+}

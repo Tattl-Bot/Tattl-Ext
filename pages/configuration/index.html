@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Configuration</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="wrap">
+      <h1>Configuration</h1>
+      <div><h1 id="error" class="error"></h1></div>
+      <div class="section">
+        <h2>Edit Watchlist</h2>
+        <div><p id="watchlistError" class="info"></p></div>
+        <div>
+          <label for="watchList">Enter one url per line:</label>
+        </div>
+        <div>
+          <textarea
+            name="watchList"
+            id="watchList"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
+        <div>
+          <button type="button" id="saveWatchlist">Save Watchlist</button>
+        </div>
+      </div>
+      <div class="section">
+        <h2>Edit Profile</h2>
+        <div><p id="profileError" class="info"></p></div>
+        <div class="flex">
+          <label for="name">Name: </label>
+          <input type="text" name="name" id="name" />
+        </div>
+        <div class="flex">
+          <label for="discordName">Discord username:</label>
+          <input type="text" name="discordName" id="discordName" />
+        </div>
+        <div>
+          <button type="button" id="saveProfile">Save Profle</button>
+        </div>
+      </div>
+      <div class="section">
+        <h2>Token</h2>
+        <div class="flex">
+          <button type="button" id="tokenBtn">Reveal</button>
+          <input type="text" id="token" readonly />
+          <button type="button" id="copyTokenBtn">Copy</button>
+        </div>
+      </div>
+      <div class="section">
+        <div><p id="deleteError" class="info center"></p></div>
+        <button type="button" id="deleteBtn">Delete Profile</button>
+      </div>
+    </div>
+    <script type="module" src="../../lib/browser-polyfill.min.js"></script>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

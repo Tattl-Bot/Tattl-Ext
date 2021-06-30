@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: auto;
+}
+
+.wrap {
+  width: 32rem;
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  border: solid #eee;
+  padding: 1rem 4rem;
+}
+
+*:focus {
+  outline: none !important;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+input,
+button {
+  height: 3rem;
+  padding: 0.75rem;
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 0.5rem;
+  box-shadow: 0.4rem 0.4rem 0.1rem rgb(216, 216, 216);
+}
+
+input[type="text"] {
+  border: 0.1rem solid #eee;
+  color: rgb(58, 58, 58);
+}
+
+input[type="text"]:focus,
+input[type="text"]:hover {
+  background-color: #fdfdff;
+  border: 0.1rem solid rgb(131, 131, 131);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  transition: 0.3s box-shadow;
+}
+
+input[type="submit"],
+button {
+  border: none;
+  background-color: #3f51b5;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 2.5rem;
+}
+
+input[type="submit"]:hover,
+button {
+  background-color: #001797;
+}
+
+label {
+  margin-right: 1rem;
+  font-size: large;
+  font-weight: 500;
+}
+
+textarea {
+  display: inline-block;
+  margin: auto;
+}
+
+form input,
+.section input,
+.section button {
+  width: 100%;
+}
+
+form > div,
+.section div {
+  margin: 1.75rem 0;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.info {
+  opacity: 0;
+}
+
+.seen {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.success {
+  font-weight: 800;
+  color: green;
+}
+
+.error {
+  font-weight: 800;
+  color: red;
+}

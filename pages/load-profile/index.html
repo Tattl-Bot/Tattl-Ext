@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Load Profile</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="wrap">
+      <h1>Load Profile</h1>
+      <form id="loadProfile">
+        <div><p id="info" class="info"></p></div>
+        <div>
+          <label for="token">Enter your token: </label>
+          <input type="text" name="token" id="token" required />
+        </div>
+        <div>
+          <input type="submit" value="Load Profile" />
+        </div>
+      </form>
+    </div>
+
+    <script type="module" src="../../lib/browser-polyfill.min.js"></script>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
