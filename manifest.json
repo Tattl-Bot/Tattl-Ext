@@ -5,6 +5,11 @@
 
   "description": "Holds you accountable for visiting certain websites",
 
+  "icons": {
+    "48": "logo/tattl.svg",
+    "96": "logo/tattl.svg"
+  },
+
   "permissions": [
     "https://tattl.herokuapp.com/*",
     "tabs",
