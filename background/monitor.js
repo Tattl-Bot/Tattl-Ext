@@ -32,7 +32,7 @@ let prev = {
 let regexWatchList = null;
 const delay = 5;
 async function handleEvent(tabId, changeInfo, tabInfo) {
-  const url = tabInfo.url;
+  const url = changeInfo.url;
   if (url && regexWatchList.some((regexUrl) => url.match(regexUrl))) {
     const timestamp = Date.now();
     const elapsed = timestamp - prev.timestamp;

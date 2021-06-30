@@ -6,8 +6,11 @@
   "description": "Eliminate online distractions by logging your visits to potentially distracting websites",
 
   "icons": {
-    "48": "logo/tattl.svg",
-    "96": "logo/tattl.svg"
+    "16": "logo/tattl-16.png",
+    "32": "logo/tattl-32.png",
+    "48": "logo/tattl-48.png",
+    "96": "logo/tattl-96.png",
+    "128": "logo/tattl-128.png"
   },
 
   "permissions": [
