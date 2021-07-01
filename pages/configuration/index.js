@@ -19,7 +19,7 @@ async function updateWatchlist() {
 
   if (watchList) {
     watchList.forEach((url, index) => {
-      if (url.startsWith(`.*:\/\/(.*.)?`)) {
+      if (url.startsWith(`.*:\\/\\/(.*.)?`)) {
         url = url.slice(13);
       }
       if (url.endsWith("*")) {
@@ -138,7 +138,7 @@ async function saveWatchlist() {
     .map((url) => {
       if (!url.includes("/")) {
         url += "*";
-        url = `.*:\/\/(.*.)?` + url;
+        url = `.*:\\/\\/(.*.)?` + url;
       }
       return url;
     });

@@ -21,7 +21,7 @@
     }
   },
 
-  "content_security_policy": "script-src 'self' http://localhost:8080; object-src 'self'",
+  "content_security_policy": "script-src 'self' http://localhost; object-src 'self'",
 
   "background": {
     "page": "background/index.html"

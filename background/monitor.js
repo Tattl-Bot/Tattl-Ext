@@ -32,12 +32,18 @@ let prev = {
 let regexWatchList = null;
 const delay = 5;
 async function handleEvent(tabId, changeInfo, tabInfo) {
+  const title = changeInfo.title;
+  if (title) {
+    console.log(title);
+  }
   const url = changeInfo.url;
   if (url && regexWatchList.some((regexUrl) => url.match(regexUrl))) {
     const timestamp = Date.now();
     const elapsed = timestamp - prev.timestamp;
     if (url !== prev.url || elapsed > delay * 1000) {
-      await sendEvent(url);
+      //console.log(url);
+      //console.log(tabInfo.title);
+      //await sendEvent(url);
     }
     prev.url = url;
     prev.timestamp = timestamp;
