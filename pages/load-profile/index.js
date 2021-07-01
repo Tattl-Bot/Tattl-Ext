@@ -1,5 +1,5 @@
 window.addEventListener("load", function () {
-  const serverUrl = "https://tattl.herokuapp.com";
+  const serverUrl = "http://localhost:8080";
   const form = document.querySelector("#loadProfile");
 
   async function sendData() {

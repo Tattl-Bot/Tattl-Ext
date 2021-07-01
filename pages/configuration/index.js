@@ -1,4 +1,4 @@
-const serverUrl = "https://tattl.herokuapp.com";
+const serverUrl = "http://localhost:8080";
 
 async function getStoredValue(key) {
   let value = await browser.storage.sync.get(key);

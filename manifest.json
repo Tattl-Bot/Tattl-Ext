@@ -13,12 +13,7 @@
     "128": "logo/tattl-128.png"
   },
 
-  "permissions": [
-    "https://tattl.herokuapp.com/*",
-    "tabs",
-    "activeTab",
-    "storage"
-  ],
+  "permissions": ["http://localhost:8080/*", "tabs", "activeTab", "storage"],
 
   "browser_specific_settings": {
     "gecko": {
@@ -26,7 +21,7 @@
     }
   },
 
-  "content_security_policy": "script-src 'self' https://tattl.herokuapp.com; object-src 'self'",
+  "content_security_policy": "script-src 'self' https://localhost:8080; object-src 'self'",
 
   "background": {
     "page": "background/index.html"
