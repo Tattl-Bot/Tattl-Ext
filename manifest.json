@@ -13,7 +13,7 @@
     "128": "logo/tattl-128.png"
   },
 
-  "permissions": ["http://localhost:8080/*", "tabs", "activeTab", "storage"],
+  "permissions": ["http://localhost/*", "tabs", "activeTab", "storage"],
 
   "browser_specific_settings": {
     "gecko": {
@@ -21,7 +21,7 @@
     }
   },
 
-  "content_security_policy": "script-src 'self' http://localhost; object-src 'self'",
+  "content_security_policy": "script-src 'self' http://localhost:8080; object-src 'self'",
 
   "background": {
     "page": "background/index.html"

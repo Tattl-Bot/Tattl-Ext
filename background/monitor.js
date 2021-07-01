@@ -6,13 +6,14 @@ async function getStoredValue(key) {
   return textValue ? textValue : "";
 }
 
-async function sendEvent(url) {
+async function sendEvent(url, title) {
   let token = await getStoredValue("token");
   if (token) {
     let eventData = {
       type: "general",
       token: token,
       url: url,
+      title: title,
     };
     const response = await fetch(`${serverUrl}/event`, {
       method: "POST",
@@ -32,18 +33,13 @@ let prev = {
 let regexWatchList = null;
 const delay = 5;
 async function handleEvent(tabId, changeInfo, tabInfo) {
-  const title = changeInfo.title;
-  if (title) {
-    console.log(title);
-  }
   const url = changeInfo.url;
   if (url && regexWatchList.some((regexUrl) => url.match(regexUrl))) {
     const timestamp = Date.now();
     const elapsed = timestamp - prev.timestamp;
     if (url !== prev.url || elapsed > delay * 1000) {
-      //console.log(url);
-      //console.log(tabInfo.title);
-      //await sendEvent(url);
+      const title = tabInfo.title;
+      await sendEvent(url, title);
     }
     prev.url = url;
     prev.timestamp = timestamp;
