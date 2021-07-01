@@ -48,8 +48,6 @@ function updateRegexWatchList(watchList) {
   regexWatchList = [];
   if (watchList) {
     watchList.forEach((url) => {
-      url = url.replaceAll(".", "\\.");
-      url = url.replaceAll("*", ".*");
       let regexUrl = new RegExp(url);
       regexWatchList.push(regexUrl);
     });
