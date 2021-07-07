@@ -21,4 +21,6 @@ async function connectSocket() {
   socket.connect();
 }
 
+connectSocket();
+
 export default socket;
